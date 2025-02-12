@@ -22,8 +22,15 @@ function App() {
       return;
     }
     if (birthInput < 1900) {
-      alert("Preencha uma data válida, porfavor");
+      alert("Preencha uma data de nascimento acima do século XIX, porfavor");
 
+      setNameInput("");
+
+      setBirthInput("");
+      return;
+    }
+    if (isNaN(birthInput) || birthInput <= 0) {
+      alert("Porfavor, preencha um valor válido para data de nascimento");
       setNameInput("");
 
       setBirthInput("");
